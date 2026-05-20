@@ -1,0 +1,32 @@
+[
+  {
+    "Id": "34821c0f-186e-4d2f-86df-994dfce4a7cc",
+    "Name": "admin",
+    "Password": "admin",
+    "Role": 4
+  },
+  {
+    "Id": "8d5cce99-76fe-4e5f-9f51-772fd6390c98",
+    "Name": "passenger",
+    "Password": "pass",
+    "Role": 0
+  },
+  {
+    "Id": "9f79c475-605d-4347-89d8-4cba94efc917",
+    "Name": "office",
+    "Password": "office",
+    "Role": 1
+  },
+  {
+    "Id": "05975cdf-0bdc-4503-af2c-3cb42d0ad82e",
+    "Name": "pilot",
+    "Password": "pilot",
+    "Role": 2
+  },
+  {
+    "Id": "8cb5d7b6-13a8-4b47-a69f-fca7a73e40c3",
+    "Name": "tech",
+    "Password": "tech",
+    "Role": 3
+  }
+]

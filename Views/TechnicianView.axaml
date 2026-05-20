@@ -1,0 +1,9 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AirportSystem.Avalonia.Views.TechnicianView">
+    <StackPanel Margin="10">
+        <TextBlock Text="Техник" FontSize="20"/>
+        <TextBlock Text="{Binding Message}"/>
+        <Button Content="Тест" Command="{Binding TestCommand}" Margin="0,10"/>
+    </StackPanel>
+</UserControl>

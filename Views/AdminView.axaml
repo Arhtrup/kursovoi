@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AirportSystem.Avalonia.Views.AdminView">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5">
+            <TextBox PlaceholderText="Логин" Text="{Binding NewUsername}" Width="150"/>
+            <TextBox PlaceholderText="Пароль" Text="{Binding NewPassword}" PasswordChar="*" Width="150"/>
+            <ComboBox ItemsSource="{Binding Roles}" SelectedItem="{Binding NewRole}" Width="120"/>
+            <Button Command="{Binding AddUserCommand}" Content="Добавить"/>
+            <Button Command="{Binding BackCommand}" Content="Назад"/>
+        </StackPanel>
+        <ListBox ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}" DisplayMemberBinding="{Binding Name}" Height="200"/>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="5">
+            <Button Command="{Binding DeleteUserCommand}" Content="Удалить"/>
+            <TextBlock Text="{Binding StatusMessage}" Margin="10,0"/>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

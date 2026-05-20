@@ -1,0 +1,14 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AirportSystem.Avalonia.Views.MainWindow"
+        Title="Airport System" Width="1024" Height="768">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Вход" Command="{Binding ShowLoginCommand}"/>
+            <MenuItem Header="Регистрация" Command="{Binding ShowRegistrationCommand}"/>
+            <MenuItem Header="Выход" Command="{Binding LogoutCommand}"/>
+        </Menu>
+        <TextBlock DockPanel.Dock="Bottom" Text="{Binding WelcomeMessage}" Background="LightGray" Padding="5"/>
+        <ContentControl Content="{Binding CurrentView}" Margin="10"/>
+    </DockPanel>
+</Window>

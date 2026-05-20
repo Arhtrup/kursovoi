@@ -1,0 +1,7 @@
+/home/arhtryp/AirportSystem/obj/Debug/net10.0/AirportSystem.csproj.AssemblyReference.cache
+/home/arhtryp/AirportSystem/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache
+/home/arhtryp/AirportSystem/obj/Debug/net10.0/Avalonia/resources
+/home/arhtryp/AirportSystem/obj/Debug/net10.0/AirportSystem.GeneratedMSBuildEditorConfig.editorconfig
+/home/arhtryp/AirportSystem/obj/Debug/net10.0/AirportSystem.AssemblyInfoInputs.cache
+/home/arhtryp/AirportSystem/obj/Debug/net10.0/AirportSystem.AssemblyInfo.cs
+/home/arhtryp/AirportSystem/obj/Debug/net10.0/AirportSystem.csproj.CoreCompileInputs.cache

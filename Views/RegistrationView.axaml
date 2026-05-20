@@ -1,0 +1,13 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AirportSystem.Avalonia.Views.RegistrationView">
+    <StackPanel Margin="20" Width="300">
+        <TextBlock Text="Регистрация" FontSize="20"/>
+        <TextBox PlaceholderText="Имя пользователя" Text="{Binding Username}" Margin="0,10"/>
+        <TextBox PlaceholderText="Пароль" Text="{Binding Password}" PasswordChar="*" Margin="0,10"/>
+        <TextBox PlaceholderText="Подтверждение" Text="{Binding ConfirmPassword}" PasswordChar="*" Margin="0,10"/>
+        <TextBlock Text="{Binding ErrorMessage}" Foreground="Red"/>
+        <Button Content="Зарегистрироваться" Command="{Binding RegisterCommand}" Margin="0,10"/>
+        <Button Content="Отмена" Command="{Binding CancelCommand}"/>
+    </StackPanel>
+</UserControl>

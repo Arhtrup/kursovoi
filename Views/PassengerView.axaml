@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AirportSystem.Avalonia.Views.PassengerView">
+    <StackPanel Margin="10">
+        <TextBlock Text="Пассажир" FontSize="20"/>
+        <TextBlock Text="Поиск рейсов и покупка билетов" />
+        <DockPanel>
+            <TextBox DockPanel.Dock="Left" Width="100" PlaceholderText="Откуда" Text="{Binding SearchFrom}" Margin="5"/>
+            <TextBox DockPanel.Dock="Left" Width="100" PlaceholderText="Куда" Text="{Binding SearchTo}" Margin="5"/>
+            <DatePicker DockPanel.Dock="Left" SelectedDate="{Binding SearchDate}" Margin="5"/>
+            <Button DockPanel.Dock="Left" Content="Найти" Command="{Binding SearchFlightsCommand}" Margin="5"/>
+        </DockPanel>
+        <ListBox ItemsSource="{Binding AvailableFlights}" SelectedItem="{Binding SelectedFlight}" Height="150">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding FlightNumber} - {Binding DepartureCity} -> {Binding ArrivalCity}  Цена: {Binding Price}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Купить билет" Command="{Binding BuyTicketCommand}" Margin="5"/>
+        <TextBlock Text="{Binding StatusMessage}" Foreground="Green"/>
+        <TextBlock Text="Мои билеты:" FontWeight="Bold" Margin="0,10,0,0"/>
+        <ListBox ItemsSource="{Binding MyTickets}" Height="100">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding FlightNumber} - {Binding Price} руб. Дата: {Binding BookingDate}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</UserControl>

@@ -7,16 +7,18 @@ public class AuthService : IAuthService
     private User? _currentUser;
     public AuthService(IUserRepository userRepository) => _userRepository = userRepository;
     public User? CurrentUser => _currentUser;
-    public async Task LoginAsync(string username, string password)
+    public async Task<User?> LoginAsync(string username, string password)
     {
         var user = await _userRepository.GetUserByUsername(username);
         if (user != null && user.Password == password) _currentUser = user;
         else _currentUser = null;
+        return _currentUser;
     }
     public void Logout() => _currentUser = null;
-    public async Task RegisterAsync(string username, string password, UserRole role = UserRole.Passenger)
+    public async Task<bool> RegisterAsync(string username, string password, UserRole role = UserRole.Passenger)
     {
-        if (await _userRepository.GetUserByUsername(username) != null) return;
+        if (await _userRepository.GetUserByUsername(username) != null) return false;
         await _userRepository.AddUser(new User { Name = username, Password = password, Role = role });
+        return true;
     }
 }
